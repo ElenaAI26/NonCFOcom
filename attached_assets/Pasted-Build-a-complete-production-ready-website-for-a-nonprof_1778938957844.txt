@@ -1,0 +1,152 @@
+Build a complete, production-ready website for a nonprofit financial consulting firm called NonCFO (slogan: Finance on a Mission). Use React with Vite (or plain HTML/CSS/JS if simpler for this environment). No Next.js, no TypeScript required — just clean, working code that runs immediately.
+
+BRAND & DESIGN
+Colors:
+
+Deep navy: #0f2444
+Gold accent: #c49a3c
+Warm cream background: #faf8f3
+Teal secondary: #2d7d6e
+White: #ffffff
+
+Fonts: Import from Google Fonts — Playfair Display (headings) + DM Sans (body)
+Feel: Premium nonprofit consultancy. Clean, warm, trustworthy. Like a hybrid between a modern startup and a mission-driven organization. Strong whitespace, confident typography, subtle hover effects.
+
+SITE STRUCTURE (Single Page with Scroll Sections)
+Build as a single-page app with smooth scroll navigation linking to each section:
+
+Nav
+Hero
+Services
+Why NonCFO
+How We Work
+Testimonials
+Resources
+Contact Form
+Footer
+
+
+NAVIGATION
+Sticky top nav. Logo on left: "NonCFO" in Playfair Display (CFO in gold). Links: About, Services, Resources, Contact. CTA button "Schedule a Consultation" in gold. Collapses to hamburger on mobile. Background becomes white with shadow on scroll.
+
+HERO SECTION
+Full-height dark navy background (#0f2444) with subtle grid line overlay (CSS only).
+
+Small label tag: "Fractional CFO Services for Nonprofits"
+H1: "Financial Clarity for Mission-Driven Organizations"
+Subheading: "NonCFO gives nonprofits and faith-based organizations the strategic financial leadership they need to grow their impact—without the cost of a full-time CFO."
+Two CTA buttons: "Schedule a Consultation" (gold) and "Explore Services" (outline white)
+Three stats below a divider line: 15+ Years Experience / 40+ Organizations Served / 100% Mission-Focused
+
+
+SERVICES SECTION
+Cream background. Section title: "The Financial Partnership Your Mission Deserves"
+Three cards side by side (stack on mobile):
+Card 1 — Fractional CFO Services (navy icon)
+
+Executive-level financial oversight
+Board and funder engagement
+Strategic planning and scenario analysis
+Systems transformation
+
+Card 2 — Grants & Contracts Management (teal icon)
+
+Pre- and post-award management
+Cost proposals and budget proposals
+Narrative alignment
+T&C negotiations and compliance policy
+
+Card 3 — Financial Operations & Analysis (gold icon)
+
+Cash flow modeling and scenario planning
+Budget vs actuals tracking
+KPI dashboards
+Board-ready monthly financial packages
+
+Each card has a hover lift effect and "Learn more →" link.
+
+WHY NONCFO SECTION
+White background. Left side: heading + paragraph text. Right side: 2x2 grid of feature tiles.
+Heading: "Why Nonprofits Choose NonCFO"
+Body: "We're not just another consulting firm. We partner with leaders who are deeply committed to their mission—and we bring the same commitment to their financial health."
+Four tiles:
+
+Mission-First Mindset — We understand that finances are a means, not an end. Every recommendation amplifies your mission.
+Board-Ready Expertise — We translate complex financial data into clear, actionable insights for boards and funders.
+Tools That Last — We build frameworks and systems your team keeps using long after our engagement ends.
+Nonprofit-Specific Guidance — From indirect cost rates to grant compliance, we speak the language of mission-driven finance.
+
+
+HOW WE WORK SECTION
+Cream background. Four numbered steps in a row (stack on mobile):
+
+Discovery Call — A no-pressure conversation to understand your situation, goals, and challenges.
+Financial Assessment — A thorough review of your current systems, reporting, and processes.
+Tailored Engagement — A service scope that matches your needs, timeline, and budget.
+Ongoing Partnership — Insights, tools, and frameworks—plus continued access to your strategic financial partner.
+
+
+TESTIMONIALS SECTION
+Dark navy background, white text. Three quote cards:
+
+"NonCFO gave us the financial clarity we needed to confidently approach major funders. Our board finally understands our financial health at a glance." — Executive Director, Community Development Nonprofit
+"Steven's approach is different—he doesn't just hand you reports. He builds your team's capacity and leaves you stronger than he found you." — Founder & CEO, Faith-Based Social Services Organization
+"We had no idea how much we were leaving on the table with our indirect cost structure. NonCFO restructured our grants approach and it made a real difference." — Development Director, Mid-size Human Services Nonprofit
+
+
+RESOURCES SECTION
+White background. Heading: "Tools That Empower Your Team"
+Four resource cards in a 2x2 grid:
+
+Indirect Rate Template (Excel)
+Budget vs Actuals Dashboard (Excel)
+Nonprofit Financial Toolkit (PDF Guide)
+Grant Budget Template (Excel)
+
+Each card: icon, tag label, title, short description, and a "Coming Soon" or "Download" badge.
+Below the cards: simple email newsletter signup — input + "Subscribe" button.
+
+CONTACT / CONSULTATION SECTION
+Cream background. Two-column layout.
+Left — Form:
+
+Heading: "Schedule Your Free Consultation"
+Fields: Full Name, Email Address, Phone, Organization Website, Organization Size (dropdown with budget ranges: Under $250K / $250K–$500K / $500K–$1M / $1M–$3M / $3M–$10M / Over $10M), and a textarea: "What problem are you trying to solve?"
+Submit button: "Request My Free Consultation" (navy)
+Note below: "No commitment required. We'll respond within 1–2 business days."
+
+Right — Trust sidebar:
+
+"What to Expect" — 4 numbered steps (We review your form → Schedule discovery call → Listen to your situation → Share honest feedback)
+A pull quote card in gold/cream: "The initial call with Steven was unlike any consulting conversation I'd had. He actually listened."
+
+On form submit: show a thank-you message ("We'll be in touch within 1–2 business days") without a page reload.
+
+FOOTER
+Dark navy background. Four columns:
+
+Brand column: NonCFO logo + tagline + LinkedIn icon
+Services: Fractional CFO, Grants & Contracts, Financial Operations
+Company: About, Resources, Contact
+Bottom bar: © 2025 NonCFO. All rights reserved.
+
+
+TECHNICAL REQUIREMENTS
+
+Single HTML file OR React/Vite single page — whatever runs cleanly in Replit
+Mobile-first responsive design
+Smooth scroll between sections
+Sticky nav that changes style on scroll (JS scroll listener)
+Hamburger menu on mobile
+Form submission shows thank-you state without page reload
+Hover effects on cards (translateY lift + shadow)
+No external dependencies beyond Google Fonts and one icon library (use Lucide CDN or simple SVG icons inline)
+All sections clearly ID'd for anchor links (#services, #contact, etc.)
+
+
+COPY RULES
+
+Write like a premium consulting firm, not a generic nonprofit
+Avoid clichés like "make a difference" or "change the world"
+Use "mission-driven" sparingly and purposefully
+Keep CTAs action-oriented and specific

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "NonCFO Website"
+version = "1.0.0"
+id = "artifacts/noncfo"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20012
+
+[services.development]
+run = "pnpm --filter @workspace/noncfo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/noncfo", "run", "build" ]
+publicDir = "artifacts/noncfo/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20012"
+BASE_PATH = "/"
