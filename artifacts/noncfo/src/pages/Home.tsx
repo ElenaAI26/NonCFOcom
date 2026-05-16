@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Menu, X, ArrowRight, CheckCircle2, ChevronRight, BarChart3, FileText, Settings, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import stevenHeadshot from "@assets/Steve_headshot_1778952612341.jpg";
+const steveHeadshot = "/Steve_headshot_1778952612341.jpg";
 
 export default function Home() {
   const { toast } = useToast();
