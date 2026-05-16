@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Menu, X, ArrowRight, CheckCircle2, ChevronRight, BarChart3, FileText, Settings, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import stevenHeadshot from "@assets/Steve_headshot_1778950122528.jpg";
 
 export default function Home() {
   const { toast } = useToast();
@@ -245,29 +246,19 @@ export default function Home() {
             <div className="w-full lg:w-2/5 flex-shrink-0">
               <div
                 className="relative mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl"
-                style={{ maxWidth: "400px", aspectRatio: "4/5", background: "#e8e4dc" }}
+                style={{ maxWidth: "400px", aspectRatio: "3/4", background: "#e8e4dc" }}
               >
                 <img
-                  src="https://noncfo.com/wp-content/uploads/2024/01/noncfo-Without-Slogan_edited.jpg"
+                  src={stevenHeadshot}
                   alt="Steven H. Tran, Founder of NonCFO"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    target.style.display = "none";
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.style.display = "flex";
-                      parent.style.alignItems = "center";
-                      parent.style.justifyContent = "center";
-                      parent.style.flexDirection = "column";
-                      parent.style.gap = "12px";
-                      const initials = document.createElement("div");
-                      initials.textContent = "ST";
-                      initials.style.cssText = "font-family:'Playfair Display',serif;font-size:72px;font-weight:700;color:#0f2444;opacity:0.3;";
-                      parent.appendChild(initials);
-                    }
-                  }}
+                  style={{ objectPosition: "center 8%" }}
                   data-testid="founder-headshot"
+                />
+                {/* Subtle gradient fade at bottom */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+                  style={{ background: "linear-gradient(to top, rgba(15,36,68,0.18) 0%, transparent 100%)" }}
                 />
                 {/* Gold accent bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-1.5" style={{ background: "#c49a3c" }} />
@@ -316,7 +307,21 @@ export default function Home() {
                 { title: "Tools That Last", desc: "We build frameworks and systems your team keeps using long after our engagement ends." },
                 { title: "Nonprofit-Specific Guidance", desc: "From indirect cost rates to grant compliance, we speak the language of mission-driven finance." }
               ].map((feature, idx) => (
-                <div key={idx} className="bg-background p-6 rounded-lg border border-gray-100">
+                <div
+                  key={idx}
+                  className="bg-background p-6 rounded-lg border border-gray-100 transition-all duration-300 cursor-default"
+                  style={{ transitionProperty: "transform, box-shadow" }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(15,36,68,0.12)";
+                    (e.currentTarget as HTMLDivElement).style.borderColor = "#c49a3c";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = "";
+                    (e.currentTarget as HTMLDivElement).style.borderColor = "";
+                  }}
+                >
                   <div className="w-8 h-1 bg-accent mb-4 rounded-full"></div>
                   <h4 className="text-lg font-serif font-bold text-primary mb-2">{feature.title}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
