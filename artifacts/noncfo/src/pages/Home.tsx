@@ -238,6 +238,68 @@ export default function Home() {
       {/* Why Us Section */}
       <section id="why" className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
+
+          {/* Founder Story */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-20 pb-20 border-b border-gray-100">
+            {/* Headshot */}
+            <div className="w-full lg:w-2/5 flex-shrink-0">
+              <div
+                className="relative mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl"
+                style={{ maxWidth: "400px", aspectRatio: "4/5", background: "#e8e4dc" }}
+              >
+                <img
+                  src="https://noncfo.com/wp-content/uploads/2024/01/noncfo-Without-Slogan_edited.jpg"
+                  alt="Steven H. Tran, Founder of NonCFO"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.style.display = "flex";
+                      parent.style.alignItems = "center";
+                      parent.style.justifyContent = "center";
+                      parent.style.flexDirection = "column";
+                      parent.style.gap = "12px";
+                      const initials = document.createElement("div");
+                      initials.textContent = "ST";
+                      initials.style.cssText = "font-family:'Playfair Display',serif;font-size:72px;font-weight:700;color:#0f2444;opacity:0.3;";
+                      parent.appendChild(initials);
+                    }
+                  }}
+                  data-testid="founder-headshot"
+                />
+                {/* Gold accent bar */}
+                <div className="absolute bottom-0 left-0 right-0 h-1.5" style={{ background: "#c49a3c" }} />
+              </div>
+            </div>
+
+            {/* Story */}
+            <div className="w-full lg:w-3/5">
+              <span className="text-sm font-bold tracking-widest uppercase mb-3 block" style={{ color: "#2d7d6e" }}>
+                Meet the Founder
+              </span>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6" style={{ color: "#0f2444" }}>
+                Steven H. Tran
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                Steven founded NonCFO after more than 15 years working inside nonprofit finance—as a controller, CFO, and grants manager for organizations ranging from small faith-based ministries to multi-million-dollar human services agencies. He built NonCFO because he saw too many mission-driven leaders making critical decisions without the financial clarity they deserved.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                His approach is grounded in a simple belief: strong financial systems don't constrain a mission—they protect and accelerate it. From indirect cost negotiations to board-ready reporting, Steven brings the same rigor to a $300K organization that a Fortune 500 CFO brings to a billion-dollar one.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                He holds deep expertise in federal grant compliance, cost allocation, and nonprofit financial strategy, and has helped more than 40 organizations strengthen the financial foundations that their work depends on.
+              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <div className="h-px flex-1" style={{ background: "#e5e0d6" }} />
+                <span className="text-sm text-gray-400 italic font-light">Founder &amp; Principal Consultant, NonCFO</span>
+                <div className="h-px flex-1" style={{ background: "#e5e0d6" }} />
+              </div>
+            </div>
+          </div>
+
+          {/* Why NonCFO heading + feature tiles */}
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/3">
               <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Why Us</h2>
