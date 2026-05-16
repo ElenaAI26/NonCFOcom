@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Menu, X, ArrowRight, CheckCircle2, ChevronRight, BarChart3, FileText, Settings, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import stevenHeadshot from "@assets/Steve_headshot_1778950122528.jpg";
+import stevenHeadshot from "@assets/Steve_headshot_1778952612341.jpg";
 
 export default function Home() {
   const { toast } = useToast();
@@ -246,13 +246,13 @@ export default function Home() {
             <div className="w-full lg:w-2/5 flex-shrink-0">
               <div
                 className="relative mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl"
-                style={{ maxWidth: "400px", aspectRatio: "3/4", background: "#e8e4dc" }}
+                style={{ maxWidth: "400px", aspectRatio: "1/1", background: "#e8e4dc" }}
               >
                 <img
                   src={stevenHeadshot}
                   alt="Steven H. Tran, Founder of NonCFO"
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 8%" }}
+                  style={{ objectPosition: "center center" }}
                   data-testid="founder-headshot"
                 />
                 {/* Subtle gradient fade at bottom */}
